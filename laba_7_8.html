@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>GALLERY</title>
+        <style>
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                
+                flex-direction: column;
+            }
+ 
+            .gallery img {
+                display: flex;
+                margin: 50px 50px;
+                padding: auto;
+                justify-content: center;
+                width: 500px;
+                height: auto;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            var counter=0
+            gallery = ["images/img_1.jpg", "images/img_2.jpg", "images/img_3.jpg", "images/img_4.jpg", "images/img_5.jpg", "images/img_6.jpg", "images/img_7.jpg"]
+            imggallery = function() {
+                document.getElementById("imggal").src= gallery[counter];
+                counter++;
+                if(counter>=gallery.length){
+                    counter=0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="gallery">
+                    <h1 >GALLERY</h1>
+                    <h2> pls tap the picturs to change</h2>
+        <div class="gallery img">
+            <img src="images/img_1.jpg", id="imggal", onclick="imggallery()"/></div>   
+        </div>
+
+    </body>
+</html>
